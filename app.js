@@ -35,6 +35,9 @@ function removeFromBasket(productId) {
 }
 
 function renderTotalPrice() {
+  const totalPrice = order.reduce((acc, item) => {
+    return acc + item.price;
+  }, 0);
   document.getElementById('total').innerText = totalPrice;
 }
 
